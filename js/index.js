@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if(usuario==null){
         alert('Por favor inicie sesión para continuar');
         location.href= "login.html"
-    }else{
+    } else{
         document.getElementById('usuario').innerHTML = usuario;
     }
 
