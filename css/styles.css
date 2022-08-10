@@ -189,13 +189,10 @@ a.custom-card:hover {
   color: orange;
 }
 
-.imglogin {
-  align-content: center;
-  width: 1%;
-  height: 1%;
-}
-
-
 .formulariologin{
   text-align: center;
+}
+
+.text-muted{
+   align-content: flex-end;
 }
