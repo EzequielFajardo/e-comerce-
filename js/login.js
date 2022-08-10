@@ -2,12 +2,17 @@ function login () {
    let usuario = document.getElementById("email-login").value
    let contraseña = document.getElementById('contraseña-login').value
 
-   if( usuario==="" || contraseña==="" ){
+   if( usuario==="" || contraseña===""){
     alert ('Debe ingresar email y contraseña');
+    document.getElementById('email-login').classList.add('error-login');
+    document.getElementById('contraseña-login').classList.add('error-login');
 
-   } else{
+
+   }else{
+    sessionStorage.setItem("user", usuario)
     location.href='index.html';
    }
+
 
 }
 

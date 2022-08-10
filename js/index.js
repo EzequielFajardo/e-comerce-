@@ -12,3 +12,14 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+document.addEventListener('DOMContentLoaded', function(){
+
+    let usuario = sessionStorage.getItem(user);
+    if(usuario=="null"){
+        alert('Por favor inicie sesión para continuar');
+        this.location.href= "login.html"
+    }else{
+        document.getElementById(usuario).innerHTML = usuario;
+    }
+
+})

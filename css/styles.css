@@ -189,10 +189,25 @@ a.custom-card:hover {
   color: orange;
 }
 
+.body-login {
+  background-color: whitesmoke;
+}
+
 .formulariologin{
   text-align: center;
 }
 
 .text-muted{
    align-content: flex-end;
+}
+
+#button-login{
+  background-color: #0087F7;
+  border-color: #0087F7;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  
+}
+.error-login {
+  border-color: red;
 }
