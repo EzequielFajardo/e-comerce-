@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener('DOMContentLoaded', function(){
 
     let usuario = sessionStorage.getItem(user);
-    if(usuario=="null"){
+    if(usuario==null){
         alert('Por favor inicie sesión para continuar');
         location.href= "login.html"
     }else{
