@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 document.addEventListener('DOMContentLoaded', function(){
 
-    let usuario = sessionStorage.getItem(user);
+    let usuario = sessionStorage.getItem('user');
     if(usuario==null){
         alert('Por favor inicie sesión para continuar');
         location.href= "login.html"
     }else{
-        document.getElementById(usuario).innerHTML = usuario;
+        document.getElementById('usuario').innerHTML = usuario;
     }
 
 })
