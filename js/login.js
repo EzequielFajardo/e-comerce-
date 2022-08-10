@@ -9,7 +9,7 @@ function login () {
 
 
    }else{
-    sessionStorage.setItem("user", usuario)
+    sessionStorage.setItem("user", usuario);
     location.href='index.html';
    }
 
