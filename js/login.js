@@ -3,7 +3,11 @@ function login () {
    let contraseña = document.getElementById('contraseña-login').value
 
    if( usuario==="" || contraseña===""){
-    alert ('Debe ingresar email y contraseña');
+    Swal.fire(
+        'Campos incompletos',
+        'Debe ingresar email y contraseña',
+        'error'
+      )
     document.getElementById('email-login').classList.add('error-login');
     document.getElementById('contraseña-login').classList.add('error-login');
 
@@ -12,9 +16,8 @@ function login () {
     sessionStorage.setItem("user", usuario);
     location.href='index.html';
    }
-
-
 }
+
 
 document.addEventListener('DOMContentLoaded', ()=>
 

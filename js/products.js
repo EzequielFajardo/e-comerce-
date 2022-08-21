@@ -51,3 +51,8 @@ document.addEventListener("DOMContentLoaded", function(e){
         }
     });
 });
+
+document.getElementById('cerrarSesion').addEventListener('click', ()=>{
+    sessionStorage.clear;
+    location.href='login.html'
+})

@@ -211,3 +211,8 @@ a.custom-card:hover {
 .error-login {
   border-color: red;
 }
+#cerrarSesion{
+  background-color: red;
+  color: white;
+  border-color: red;
+}

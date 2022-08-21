@@ -16,10 +16,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let usuario = sessionStorage.getItem('user');
     if(usuario==null){
-        alert('Por favor inicie sesión para continuar');
+      alert('Inicie sesión para continuar')
+       
         location.href= "login.html"
     } else{
         document.getElementById('usuario').innerHTML = usuario;
     }
 
+})
+document.getElementById('cerrarSesion').addEventListener('click', ()=>{
+  sessionStorage.clear;
+  location.href='login.html'
 })
