@@ -40,3 +40,15 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+document.addEventListener('DOMContentLoaded',  ()=>{
+  let  usuarioIniciado = sessionStorage.getItem('user');
+  document.getElementById('usuario-iniciado').innerHTML = usuarioIniciado
+  
+
+})
+
+document.getElementById('cerrarSesion').addEventListener('click', ()=>{
+  sessionStorage.clear;
+  location.href='login.html'
+})

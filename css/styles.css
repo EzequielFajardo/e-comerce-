@@ -216,3 +216,7 @@ a.custom-card:hover {
   color: white;
   border-color: red;
 }
+#usuario-iniciado{
+  
+  color: gray;
+}
