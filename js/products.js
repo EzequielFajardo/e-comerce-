@@ -1,9 +1,9 @@
 
 let products = [];
-const ordenAscNombre = "AZ";
-const ordenDesNombre = "ZA";
+const costoOrdenAscendente = "AZ";
+const costoOrdenDescendente = "ZA";
 const ordenVendidos = "Cant.";
-let criterioOrdenar = undefined;
+let criterioParaOrdenar = undefined;
 let minCost = undefined;
 let maxCost = undefined;
 
@@ -72,14 +72,14 @@ function filtrar() {
 
  function sortProducts(criteria, array){
         let result = [];
-        if (criteria === ordenAscNombre)
+        if (criteria === costoOrdenAscendente)
         {
             result = array.sort(function(a, b) {
                 if ( a.cost < b.cost ){ return -1; }
                 if ( a.cost > b.cost ){ return 1; }
                 return 0;
             });
-        }else if (criteria === ordenDesNombre){
+        }else if (criteria === costoOrdenDescendente){
             result = array.sort(function(a, b) {
                 if ( a.cost > b.cost ){ return -1; }
                 if ( a.cost < b.cost ){ return 1; }
@@ -99,16 +99,15 @@ function filtrar() {
         return result;
     }
     
-    function ordenaryMostrar(sortCriteria, productos){
-    criterioOrdenar = sortCriteria;
+    function sortAndShow(sortCriteria, productos){
+    criterioParaOrdenar = sortCriteria;
 
     if(products != undefined){
-        currentCategoriesArray = productos;
+        currentProductsArray = productos;
     }
 
-    products = sortProducts(criterioOrdenar, products);
+    products = sortProducts(criterioParaOrdenar, products);
 
-    //Muestro las categorías ordenadas
     showProductsList(products);
 }
 
@@ -125,17 +124,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
 
         document.getElementById("sortAsc").addEventListener("click", function(){
-            ordenaryMostrar(ordenAscNombre);
+            sortAndShow(costoOrdenAscendente);
            
             
         });
     
         document.getElementById("sortDesc").addEventListener("click", function(){
-            ordenaryMostrar(ordenDesNombre);
+            sortAndShow(costoOrdenDescendente);
         });
     
         document.getElementById("sortByCount").addEventListener("click", function(){
-            ordenaryMostrar(ordenVendidos);
+            sortAndShow(ordenVendidos);
         
         });
 
