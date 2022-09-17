@@ -27,24 +27,42 @@
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
           </li>
-          <li class="nav-item" id="usuario-iniciado" >           
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-          </li>
+         
+        </li>
+        <li class="nav-item" id="usuario-iniciado" >           
+        </li>
+        <li class="nav-item">
+          <button id="cerrarSesion" class="btn btn-primary">Cerrar sesión</button>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+  
+  <div id="info-list-container"></div>
+  <div class="contenidoComentarios">
+    <div id="listaComentarios">
+      <h4 class="card-title"> <strong>Comentarios:</strong></h4>
+      </div>
+      <div> <h4> <strong>Comentar:</strong></h4>
+        <textarea name="texto" rows="5" cols="50" placeholder="Escriba aquí su comentario"></textarea> <br>
+        <h5>Tu puntuación:</h5>
+        <select name="menu">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <br>
+        <p>
+          <input type="submit" value="Enviar" class="btn btn-primary">
+        </p>
       </div>
     </div>
-  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

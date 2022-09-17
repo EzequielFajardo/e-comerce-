@@ -7,7 +7,11 @@ let criterioParaOrdenar = undefined;
 let minCost = undefined;
 let maxCost = undefined;
 
-
+function setProductID(id) {
+    localStorage.setItem("productID", id);
+    window.location = "product-info.html"
+    
+}
 
 function showProductsList(array){
     let htmlContentToAppend = "";
@@ -19,13 +23,14 @@ function showProductsList(array){
         ((maxCost == undefined) || (maxCost != undefined && parseInt(products.productCount) <= maxCost))){
 
          htmlContentToAppend += `
+     <div onclick="setProductID(${products.id})" class="list-group-item list-group-item-action cursor-active">
 
-         <div class="list-group-item list-group-item-action">
+         
             <div class="row">
-                <div class="col-3">
+                 <div class="col-3">
                     <img src="${products.image}" alt="product image" class="img-thumbnail">
-                </div>
-                <div class="col">
+                 </div>
+                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
                         <div class="mb-1">
                         <h4 class="mb-1"> ${products.name} -  ${products.currency} ${products.cost}</h4> 
@@ -35,9 +40,10 @@ function showProductsList(array){
                         
                     </div>
 
-                </div>
+                 </div>
             </div>
-        </div>
+    
+     </div>
         `
         }
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend; 
