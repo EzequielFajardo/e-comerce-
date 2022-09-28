@@ -1,5 +1,11 @@
 let productInfo = [];
 let comentarios = [];
+function setProductID(id) {
+  localStorage.setItem("productID", id);
+  document.location.reload()
+  
+}
+
 
 function showProductInfo(productInfo) {
   let htmlContentToAppend = "";
@@ -63,22 +69,17 @@ function showProductInfo(productInfo) {
 </div>
 
 <br><h4><strong>Productos relacionados:</strong></h4>
-<div class="segundoRelacionado">
-<div class="bbb_advs"> <div class="container">
- <div class="row"> <div class="col-lg-4 bbb_adv_col">
-  <!-- bbb_adv Item --> <div class="bbb_adv d-flex flex-row align-items-center justify-content-start">
-   <div class="bbb_adv_content"> <div class="bbb_adv_title"><a href="#">${productInfo.relatedProducts[0].name}</a></div> 
-   <div class="bbb_adv_text">Las personas también vierón este producto</div>
-    </div> <div class="ml-auto"> 
-    <div class="bbb_adv_image"><img src= ${productInfo.relatedProducts[0].image} alt="">
-    </div> </div> </div> </div> </div> </div> </div>   
-      <div class="col-lg-4 bbb_adv_col"> <!-- bbb_adv Item -->
-       <div class="bbb_adv d-flex flex-row align-items-center justify-content-start"> 
-       <div class="bbb_adv_content"> <div class="bbb_adv_title"><a href="#">${productInfo.relatedProducts[1].name}</a></div>
-        <div class="bbb_adv_text">Las personas también vierón este producto</div>
-         </div> <div class="ml-auto"> 
-         <div class="bbb_adv_image"><img src=${productInfo.relatedProducts[1].image} alt="">
-         </div></div> </div> </div> </div> </div> </div> </div>
+
+<div class="imgRel">
+   <h6>${productInfo.relatedProducts[0].name}</h6>
+   <div onclick="setProductID(${productInfo.relatedProducts[0].id})" id="ProdRel1">
+   <input type="image"src= ${productInfo.relatedProducts[0].image} alt="" class=" img-thumbnail" width="25%" >
+    </div>
+    
+   <h6>${productInfo.relatedProducts[1].name}</h6>
+   <div onclick="setProductID(${productInfo.relatedProducts[1].id})" id="ProdRel2">
+   <input type="image" src=${productInfo.relatedProducts[1].image} alt="" class="  img-thumbnail" width="25%" >
+   </div>  </div>
      `;
 
   document.getElementById("info-list-container").innerHTML =

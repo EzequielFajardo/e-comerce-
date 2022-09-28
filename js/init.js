@@ -45,10 +45,16 @@ document.addEventListener('DOMContentLoaded',  ()=>{
   let  usuarioIniciado = sessionStorage.getItem('user');
   document.getElementById('usuario-iniciado').innerHTML = usuarioIniciado
   
+  document.getElementById('cerrarSesion').addEventListener('click', ()=>{
+    sessionStorage.clear;
+    location.href='login.html'
+  })
 
-})
+  document.getElementById("miCarrito").addEventListener('click', ()=> {
+    location.href='cart.html'
+  })
+  document.getElementById("miPerfil").addEventListener('click', ()=> {
+    location.href='my-profile.html'
+  })
 
-document.getElementById('cerrarSesion').addEventListener('click', ()=>{
-  sessionStorage.clear;
-  location.href='login.html'
 })

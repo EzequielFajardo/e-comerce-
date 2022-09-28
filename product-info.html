@@ -32,10 +32,16 @@
           </li>
          
         </li>
-        <li class="nav-item" id="usuario-iniciado" >           
-        </li>
-        <li class="nav-item">
-          <button id="cerrarSesion" class="btn btn-primary">Cerrar sesión</button>
+        <li class="nav-item" >  
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="usuario-iniciado" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" id="miCarrito" href="#">Mi carrito</a></li>
+              <li><a class="dropdown-item" id="miPerfil" href="#">Mi perfil</a></li>
+              <li><a class="dropdown-item" id="cerrarSesion" href="#">Cerrar sesión</a></li>
+            </ul>
+          </div>  
         </li>
         </ul>
       </div>
@@ -63,6 +69,8 @@
         </p>
       </div>
     </div>
+    
+    <div id="productosRelacionados"></div>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
