@@ -60,13 +60,48 @@
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+ <div id="datosPerfil" > <br>
+
+ <br> <h2>Perfil</h2> 
+ <hr><br>
+  <form class="row mt-4 needs-validation" id="formDatos" novalidate>
+
+    <div class="input-group mb-3"> 
+     <label for="nombre" class="form-label text-muted">Nombre(*)</label><br><input type="text" name="nombre" id="nombre" class="form-control" required>
+     <div class="invalid-feedback" id="nombreInvalido">
+      Debe ingresar un nombre.
     </div>
-  </main>
+    </div>
+    <div class="input-group mb-3">
+      <label for="segundoNombre" class="form-label text-muted">Segundo nombre</label><input type="text" name="segundoNombre" id="segundoNombre" class="form-control">
+      
+    </div>
+    <div class="input-group mb-3"> 
+      <label for="apellido" class="form-label text-muted">Apellido(*)</label><input type="text" name="apellido" id="apellido"  class="form-control" required>
+      <div class="invalid-feedback" id="apellidoInvalido">
+        Debe ingresar un apellido.
+    </div>
+    </div>
+    <div class="input-group mb-3">
+      <label for="segundoApellido" class="form-label text-muted">Segundo apellido</label><input type="text" name="segundoApellido" id="segundoApellido"  class="form-control">
+
+    </div>
+    <div class="input-group mb-3">     
+        <label for="e-mail" class="form-label text-muted">E-mail(*)</label><input type="email" name="email1" id="email1" class="form-control" required>
+        <div class="invalid-feedback" id="emailInvalido">
+          Debe ingresar un e-mail.
+      </div>
+      </div>
+      <div class="input-group mb-3">
+        <label for="telefono" class="form-label text-muted">Teléfono de contacto</label><input type="number" name="telefono" id="telefono" class="form-control">
+
+      </div>
+      <div class="d-grid gap-2">
+          <button class="btn btn-primary" type="submit" id="botonPerfil"> Guardar cambios </button>
+       </div>
+ </div>
+</form>
+ 
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

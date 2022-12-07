@@ -1,0 +1,47 @@
+<div id="datosPerfil" > <br>
+
+    <br> <h2>Perfil</h2> 
+    <hr><br>
+   
+       <div class="input-group mb-3"> 
+        <label for="nombre" class="form-label text-muted">Nombre(*)</label><br><input type="text" name="nombre" id="nombre" class="form-control">
+        <label for="segundoNombre" class="form-label text-muted">Segundo nombre</label><input type="text" name="segundoNombre" id="segundoNombre" class="form-control">
+       </div>
+       <div class="input-group mb-3"> 
+         <label for="apellido" class="form-label text-muted">Apellido(*)</label><input type="text" name="apellido" id="apellido"  class="form-control">
+         <label for="segundoApellido" class="form-label text-muted">Segundo apellido</label><input type="text" name="segundoApellido" id="segundoApellido"  class="form-control">
+       </div>
+       <div class="input-group mb-3">     
+           <label for="e-mail" class="form-label text-muted">E-mail(*)</label><input type="email" name="email1" id="email1" class="form-control">
+           <label for="telefono" class="form-label text-muted">Teléfono de contacto</label><input type="number" name="telefono" id="telefono" class="form-control">
+         </div>
+         <div class="d-grid gap-2">
+             <button class="btn btn-primary" type="button" id="botonPerfil"> Guardar cambios </button>
+          </div>
+        
+      
+   
+    
+    </div>
+
+    function validarDatos(){
+  
+        let nombre1 =  document.getElementById('nombre');
+        let apellido1 = document.getElementById('apellido');
+         let email2 = document.getElementById('email1');
+         let res = true
+         let exp =/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+      
+         if (exp.test(email2.value)){
+          email2.setCustomValidity("");
+      }else{
+          email2.setCustomValidity(false);
+          res=false;
+      }
+      
+      
+      return res
+      
+         
+          
+      }
